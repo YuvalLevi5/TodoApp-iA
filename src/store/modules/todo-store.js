@@ -51,7 +51,6 @@ export const todoStore = {
     },
     deleteTodo(state, { todoId }) {
       const idx = state.todos.findIndex((todo) => todo._id === todoId)
-      state.lastRemovedTodo = state.todos[idx]
       state.todos.splice(idx, 1)
     },
     addTodo(state, { todo }) {
